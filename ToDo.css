@@ -1,0 +1,120 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page */
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  padding: 16px;
+  background-color: #f5f7fb;
+}
+
+/* Title */
+#h1 {
+  color: blueviolet;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Grid layout (desktop & tablet) */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Inputs */
+#todo-input,
+#todo-date {
+  font-size: 15px;
+  padding: 10px 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Buttons */
+.btn-todo {
+  background-color: rgb(21, 190, 24);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background-color: rgb(244, 63, 22);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+/* Hover effects */
+.btn-todo:hover {
+  background-color: rgb(18, 160, 20);
+}
+
+.btn-delete:hover {
+  background-color: rgb(210, 50, 15);
+}
+
+/* Todo list spacing */
+.todo-container {
+  margin-top: 20px;
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+   ========================= */
+@media (max-width: 480px) {
+  body {
+    text-align: center;
+  }
+
+  /* Stack inputs & buttons */
+  .grid-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  /* Bigger inputs */
+  #todo-input,
+  #todo-date {
+    font-size: 18px;
+    padding: 12px 10px;
+    width: 100%;
+  }
+
+  /* Bigger buttons */
+  .btn-todo,
+  .btn-delete {
+    font-size: 18px;
+    padding: 12px;
+    width: 100%;
+  }
+
+  /* Bigger todo text */
+  .todo-container span {
+    font-size: 18px;
+  }
+}
+/* Screen-reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
